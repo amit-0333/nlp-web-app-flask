@@ -1,0 +1,4 @@
+API : it a function but online and just beacuse it is on a server / online
+      since it is one server it has url and anyone can hit on that url through 
+      on browser we can communicate with it means takes input and gives output (but return in json)
+      
