@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NLP APP | Registration</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    /* Soft pink + beige gradient */
+    background:linear-gradient(
+    135deg,
+    #FFDDE2,
+    #FFF2E1
+    );
+}
+
+.container{
+
+    width:400px;
+    padding:35px;
+
+    background:rgba(255,255,255,0.75);
+
+    border-radius:25px;
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:
+    0px 8px 25px rgba(0,0,0,0.1);
+
+}
+
+h1{
+    text-align:center;
+    color:#8B5E5E;
+    margin-bottom:8px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#777;
+    margin-bottom:25px;
+}
+
+label{
+    display:block;
+    margin-bottom:6px;
+    color:#6d5d5d;
+    font-weight:bold;
+}
+
+input{
+
+    width:100%;
+    padding:12px;
+    margin-bottom:18px;
+
+    border:none;
+    border-radius:12px;
+
+    background:#FFF8F6;
+
+    outline:none;
+
+}
+
+input:focus{
+
+    border:2px solid #F8B4C4;
+
+}
+
+button{
+
+    width:100%;
+    padding:12px;
+
+    border:none;
+    border-radius:12px;
+
+    background:#F8B4C4;
+    color:white;
+
+    font-size:16px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+
+button:hover{
+
+    transform:scale(1.02);
+
+}
+
+p{
+
+    text-align:center;
+    margin-top:20px;
+    color:#666;
+
+}
+
+a{
+
+    text-decoration:none;
+    color:#D16B86;
+    font-weight:bold;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+{% if message %}
+<p style="color:#D16B86; 
+          background:#FFF2E1;
+          padding:10px;
+          border-radius:10px;
+          margin-bottom:15px;">
+    {{ message }}
+</p>
+{% endif %}
+
+<h1>NLP APP 🌸</h1>
+
+<p class="subtitle">
+Create your account
+</p>
+
+<form action = "/perform_registration" method = "post">
+
+<label>Full Name</label>
+<input type="text" placeholder="Enter your name" name="user's name" required>
+
+<label>Email</label>
+<input type="email" placeholder="Enter your email" name="user's email" required>
+
+<label>Password</label>
+<input type="password" placeholder="Create password" name="user's password" required>
+
+<button type="submit"> Register </button>
+
+</form>
+
+<p>
+Already a member?
+<a href="/">Login Here</a>
+</p>
+
+</div>
+
+</body>
+</html>

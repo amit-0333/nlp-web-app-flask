@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NLP APP | Login</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    /* Light pink + beige gradient */
+    background:linear-gradient(
+    135deg,
+    #FFDDE2,
+    #FFF2E1
+    );
+}
+
+.container{
+    width:380px;
+    background:rgba(255,255,255,0.7);
+
+    padding:35px;
+    border-radius:25px;
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:
+    0px 8px 25px rgba(0,0,0,0.1);
+
+    text-align:center;
+}
+
+h1{
+    color:#8B5E5E;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    color:#777;
+    margin-bottom:25px;
+}
+
+label{
+    display:block;
+    text-align:left;
+    margin-bottom:5px;
+    color:#6d5d5d;
+    font-weight:bold;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin-bottom:18px;
+
+    border:none;
+    border-radius:12px;
+
+    background:#FFF7F5;
+
+    outline:none;
+}
+
+input:focus{
+    border:2px solid #F8B4C4;
+}
+
+button{
+    width:100%;
+    padding:12px;
+
+    border:none;
+    border-radius:12px;
+
+    background:#F8B4C4;
+    color:white;
+
+    font-size:16px;
+    font-weight:bold;
+
+    cursor:pointer;
+}
+
+button:hover{
+    transform:scale(1.02);
+}
+
+p{
+    margin-top:20px;
+    color:#555;
+}
+
+a{
+    text-decoration:none;
+    color:#D16B86;
+    font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+
+<!-- Jinja templates let you put Python values inside HTML pages and control what appears. -->
+<!-- {% if message %}
+<p style="color:green;"> {{ message }} </p>
+{% endif %} -->
+
+{% if message %}
+<p style="color:#D16B86; 
+          background:#FFF2E1;
+          padding:10px;
+          border-radius:10px;
+          margin-bottom:15px;">
+    {{ message }}
+</p>
+{% endif %}
+
+
+<h1>NLP APP 🌸</h1>
+
+<p class="subtitle">Welcome Back</p>
+
+<form action="/perform_login" method="post">
+
+<label>Email</label>
+<input type="email" placeholder="Enter your email" required name="user's email">
+
+<label>Password</label>
+<input type="password" placeholder="Enter your password" required name="user's password">
+
+<button type="submit">
+Login
+</button>
+
+</form>
+
+<p>
+Not a member?
+<a href="/register">Register Here</a>
+</p>
+
+</div>
+
+</body>
+</html>
